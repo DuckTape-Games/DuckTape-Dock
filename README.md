@@ -36,6 +36,7 @@ Apps have a home-screen sort position, while apps inside groups use their own gr
 ## Built With
 
 - Python
+- SQL
 - CustomTkinter
 - SQLite
 - Pillow
