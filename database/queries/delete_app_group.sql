@@ -1,0 +1,1 @@
+DELETE FROM AppGroups WHERE appID = ? AND groupID = ?;

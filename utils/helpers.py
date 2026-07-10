@@ -35,3 +35,11 @@ def resize_image(image, new_width=None, new_height=None):
 
     #Returns the resized image with the new ratios
     return image.resize((new_width, new_height))
+
+
+### Loads an SQL query
+def load_query(queryFile):
+    queryPath = resource_path(f"database/queries/{queryFile}")
+
+    with open(queryPath, "r", encoding="utf-8") as sqlFile:
+        return sqlFile.read()

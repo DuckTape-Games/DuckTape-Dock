@@ -1,0 +1,1 @@
+INSERT INTO AppGroups (appID, groupID, appGroupSortIndex) VALUES (?,?,?);

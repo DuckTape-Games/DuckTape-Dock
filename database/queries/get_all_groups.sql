@@ -1,0 +1,1 @@
+SELECT * FROM Groups ORDER BY groupSortIndex ASC;
