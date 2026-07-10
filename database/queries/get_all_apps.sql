@@ -1,0 +1,1 @@
+SELECT * FROM Apps ORDER BY appSortIndex ASC;

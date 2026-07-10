@@ -1,0 +1,1 @@
+INSERT INTO Apps (appName, appCommand, appIcon, appType, appSortIndex) VALUES (?,?,?,?,?);
