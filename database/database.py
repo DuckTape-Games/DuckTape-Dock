@@ -11,7 +11,7 @@ from utils.helpers import load_query #Used to load sql queries from the database
 #######################
 
 #Connects database.db
-database = sql.connect(resource_path("database/database.db"))
+database = sql.connect(resource_path("database/database.db"), check_same_thread=False)
 
 #Creates a cursor object that executes sql code
 cursor = database.cursor()

@@ -13,6 +13,7 @@ from ui import ui_talker
 
 db.initialize_database()
 
+ui_talker.launch_ui()
 
 ################################################
 ### CLOSES THE APP AND DATABASE ON APP CLOSE ###
