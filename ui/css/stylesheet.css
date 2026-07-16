@@ -1,0 +1,38 @@
+/* File Variables */
+:root{
+    --header_background: #272B2F;
+    --main_background: #494a4a;
+    --yellow_accent: #FFD42A;
+
+}
+
+/* Header Design */
+.Header{
+    height: 200px;
+    width: 100vw;
+    background-color: var(--header_background);
+    margin: 0;
+    padding: 0;
+    border-bottom:#FFD42A solid 4px;
+    position:sticky;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    margin-top: -22px;
+    background-color: var(--main_background);
+}
+
+/* H1 Customizations */
+h1{
+    color: var(--yellow_accent);
+    text-align: center;
+}
+
+img{
+    width:100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
