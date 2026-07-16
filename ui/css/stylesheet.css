@@ -8,19 +8,20 @@
 
 /* Header Design */
 .Header{
-    height: 200px;
+    height: 160px;
     width: 100vw;
     background-color: var(--header_background);
     margin: 0;
     padding: 0;
     border-bottom:#FFD42A solid 4px;
-    position:sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 body{
     margin: 0;
     padding: 0;
-    margin-top: -22px;
     background-color: var(--main_background);
 }
 
@@ -28,10 +29,14 @@ body{
 h1{
     color: var(--yellow_accent);
     text-align: center;
+    margin-top: 0;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 img{
-    width:100px;
+    width:85px;
     margin-left: auto;
     margin-right: auto;
     display: block;
