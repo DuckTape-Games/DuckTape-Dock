@@ -14,33 +14,6 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-### Resizes an image
-def resize_image(image, new_width=None, new_height=None):
-    """
-    If neither dimensions are given, original image will be returned
-    If both width AND height are given, image will be stetched to fit the new dimensions
-    If only width OR height is given, image will be resized with the same ratio
-    """
-    original_width, original_height = image.size
-
-    #Just image is given
-    if not new_width and not new_height:
-        return image #Skips the rest of the function by returning the original image
-    
-    #Just width is given
-    if new_width and not new_height:
-        ratio = new_width / original_width
-        new_height = int(original_height * ratio)
-
-    #Just height is given
-    elif new_height and not new_width:
-        ratio = new_height / original_height
-        new_width = int(original_width * ratio)
-
-    #Returns the resized image with the new ratios
-    return image.resize((new_width, new_height))
-
-
 ### Loads an SQL query
 def load_query(queryFile):
     queryPath = resource_path(f"database/queries/{queryFile}")
@@ -56,8 +29,7 @@ def launch_webview_page(
     app_icon=None,
     width=1100,
     height=700,
-    on_close_message="The Page Was Closed",
-    pause_on_close=True
+    pause_on_close=False
 ):
     """Launches a local HTML file inside a pywebview window."""
 
@@ -70,7 +42,8 @@ def launch_webview_page(
 
     # Runs when the pywebview window is closed
     def on_window_closed():
-        print(on_close_message)
+        from database.database import close_database
+        close_database()
 
         # Keeps the terminal open so closing messages/errors can be read
         if pause_on_close:
